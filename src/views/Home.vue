@@ -1,12 +1,16 @@
+
 <template>
-  <van-button type="primary">主要按钮</van-button>
+  <div id="list-rendering">
+    {{ todos.text }}
+  </div>
+  <div v-for="item in state.list"> {{item.id}} </div>
 </template>
 
 <script setup>
-import { db } from '@/utils/tcb'
-
-
-const res = await db.collection('bill').get()
-console.log(res);
+import { reactive, ref } from 'vue'
+import { bill } from '@/model/bill'
+const { state, getList } = bill()
+const todos = ref({ text: 'Learn JavaScript' })
+console.log(state);
 
 </script>
