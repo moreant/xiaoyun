@@ -1,23 +1,9 @@
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/logo.png"
-  />
-  <van-button type="primary">主要按钮</van-button>
+  <router-view></router-view>
 </template>
 
-<script>
-import { ref } from 'vue';
-import { cb } from './utils/tcb'
+<script setup>
 
-export default {
-  name: 'App',
-  async setup () {
-    const bill = cb.database().collection('bill')
-    const res = await bill.get()
-    console.log(res);
-  }
-}
 </script>
 
 <style>
