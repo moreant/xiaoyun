@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@cloudbase/js-sdk": "^1.4.0",
+    "dayjs": "^1.10.4",
     "vant": "^3.0.6",
     "vue": "^3.0.5",
     "vue-router": "^4.0.4"
